@@ -1,0 +1,157 @@
+{
+  "identity": {
+    "name": "E1: The Swiss Architect",
+    "tone": "Objective, Functional, Sharp, High-Contrast",
+    "principles": [
+      "Content is King: Data is the art.",
+      "Grid is God: Everything aligns perfectly.",
+      "Typography is Structure: Size and weight create hierarchy, not decoration.",
+      "Interaction is Physical: Buttons feel like switches, inputs feel like forms."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Chivo, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-black tracking-tighter uppercase",
+      "h2": "text-3xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-xl md:text-2xl font-semibold tracking-tight",
+      "body": "text-base font-normal leading-relaxed",
+      "small": "text-xs font-medium uppercase tracking-widest"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;400;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');"
+    ]
+  },
+  "colors": {
+    "theme_mode": "system",
+    "palette": {
+      "light": {
+        "background": "#F4F4F5",
+        "surface": "#FFFFFF",
+        "text_primary": "#09090B",
+        "text_secondary": "#52525B",
+        "border": "#E4E4E7",
+        "accent": "#2563EB",
+        "accent_foreground": "#FFFFFF",
+        "destructive": "#EF4444"
+      },
+      "dark": {
+        "background": "#09090B",
+        "surface": "#121212",
+        "text_primary": "#FAFAFA",
+        "text_secondary": "#A1A1AA",
+        "border": "#27272A",
+        "accent": "#3B82F6",
+        "accent_foreground": "#FFFFFF",
+        "destructive": "#F87171"
+      }
+    },
+    "usage": {
+      "primary_action": "bg-primary text-primary-foreground hover:bg-primary/90",
+      "secondary_action": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "outline_action": "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+      "surface_card": "bg-card text-card-foreground border border-border"
+    }
+  },
+  "visual_enhancers": {
+    "texture": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")",
+      "grid": "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)"
+    },
+    "borders": {
+      "style": "solid",
+      "width": "1px",
+      "radius": "rounded-none md:rounded-sm"
+    },
+    "shadows": {
+      "card": "none",
+      "hover": "0 4px 0 0 rgba(0,0,0,1)",
+      "dark_hover": "0 4px 0 0 rgba(255,255,255,1)"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_system": "grid grid-cols-1 md:grid-cols-12 gap-6",
+    "spacing": {
+      "section_y": "py-12 md:py-24",
+      "element_gap": "gap-4 md:gap-8"
+    },
+    "bento_grid": {
+      "hero": "col-span-full md:col-span-8 row-span-2",
+      "standard": "col-span-full md:col-span-4",
+      "tall": "col-span-full md:col-span-4 row-span-2",
+      "wide": "col-span-full md:col-span-8"
+    }
+  },
+  "components": {
+    "Button": {
+      "base": "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+      "variants": {
+        "default": "bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-6 rounded-none uppercase tracking-wider font-bold",
+        "outline": "border-2 border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-6 rounded-none uppercase tracking-wider font-bold",
+        "ghost": "hover:bg-accent hover:text-accent-foreground h-10 px-4 rounded-none"
+      }
+    },
+    "Card": {
+      "base": "border bg-card text-card-foreground shadow-none rounded-none p-6 md:p-8"
+    },
+    "Input": {
+      "base": "flex h-12 w-full border-b-2 border-input bg-transparent px-3 py-1 text-base transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50 rounded-none"
+    },
+    "Badge": {
+      "base": "inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-none uppercase tracking-widest",
+      "variants": {
+        "default": "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        "secondary": "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        "outline": "text-foreground"
+      }
+    }
+  },
+  "motion": {
+    "preset": "stiff",
+    "transition": {
+      "type": "spring",
+      "stiffness": 200,
+      "damping": 20
+    },
+    "hover": {
+      "scale": 1.02,
+      "y": -2
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "stroke-[1.5px]"
+  },
+  "accessibility": {
+    "contrast_check": "APCA",
+    "focus_ring": "ring-2 ring-offset-2 ring-primary",
+    "aria_labels": "Mandatory for all icon-only buttons"
+  },
+  "image_urls": {
+    "hero_background": "css-pattern-grid",
+    "empty_state": "css-pattern-dots",
+    "logo": "text-logo-typography"
+  },
+  "instructions_to_main_agent": [
+    "1. IMPORT FONTS: Add the Google Fonts import to the top of index.css immediately.",
+    "2. RESET RADIUS: Set --radius to 0rem or 0.125rem in tailwind.config.js for that sharp Swiss look.",
+    "3. USE THE GRID: Implement the Bento Grid layout for the main Todo list. Don't just make a vertical list.",
+    "4. NOISE TEXTURE: Add a fixed positioned div with the noise SVG pattern as a background with pointer-events-none and z-50 to overlay the whole app for texture.",
+    "5. BIG TYPOGRAPHY: Use the H1 and H2 scales for page titles. Don't be shy with size.",
+    "6. MICRO-INTERACTIONS: Use framer-motion for adding/deleting tasks. It should feel snappy.",
+    "7. DATA-TESTID: Ensure every interactive element has a unique data-testid.",
+    "8. INSIGHTS: Make the insights page look like a Swiss poster. Big numbers, bold labels, grid layout."
+  ],
+  "universal_guidelines": [
+    "Avoid gradients for backgrounds, use solid colors or subtle patterns.",
+    "Use 2-3x more spacing than typical designs.",
+    "Every interaction needs micro-animations.",
+    "Never use 'Inter' for Headings, use 'Chivo'.",
+    "Ensure text meets APCA standards against backgrounds."
+  ]
+}
